@@ -48,6 +48,12 @@ final class Tabs_And_Jazz {
 		/* Load the admin files. */
 		add_action( 'plugins_loaded', array( __CLASS__, 'admin' ), 4 );
 
+		/* Enqueue scripts and styles. */
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+
+		/* Print scripts in the header. */
+		add_action( 'wp_head', array( __CLASS__, 'print_scripts' ) );
+
 		/* Register activation hook. */
 		register_activation_hook( __FILE__, array( __CLASS__, 'activation' ) );
 	}
@@ -85,8 +91,8 @@ final class Tabs_And_Jazz {
 
 		require_once( TAJ_INCLUDES . 'post-types.php' );
 		require_once( TAJ_INCLUDES . 'taxonomies.php' );
+		require_once( TAJ_INCLUDES . 'class-tabs-bells-whistles.php' );
 		require_once( TAJ_INCLUDES . 'shortcodes.php' );
-		require_once( TAJ_INCLUDES . 'template.php' );
 		require_once( TAJ_INCLUDES . 'widgets.php' );
 	}
 
@@ -115,6 +121,42 @@ final class Tabs_And_Jazz {
 		if ( is_admin() )
 			require_once( TAJ_ADMIN . 'admin.php' );
 	}
+
+	public static function enqueue_scripts() {
+
+		/* Use the .min stylesheet if SCRIPT_DEBUG is turned off. */
+		$suffix = ''; // ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+		/* Enqueue the stylesheet. */
+		wp_enqueue_style(
+			'tabs-and-jazz',
+			trailingslashit( plugin_dir_url( __FILE__ ) ) . "css/tabs-and-jazz$suffix.css",
+			null,
+			'20130123'
+		);
+
+		/* Load the jQuery UI Tabs and Accordion scripts. */
+		wp_enqueue_script( 'jquery-ui-tabs' );
+		wp_enqueue_script( 'jquery-ui-accordion' );
+	}
+
+	/**
+	 * Enables tabs and toggles using jQuery UI.
+	 *
+	 * @since  0.1.0
+	 * @access public
+	 * @return void
+	 */
+	public static function print_scripts() { ?>
+		<script>
+		jQuery( document ).ready(
+			function() {
+				jQuery( '.taj-tabs' ).tabs();
+				jQuery( '.taj-toggle' ).accordion();
+			}
+		);
+		</script>
+	<?php }
 
 	/**
 	 * Method that runs only when the plugin is activated.

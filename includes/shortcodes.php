@@ -7,7 +7,8 @@ function taj_register_shortcodes() {
 }
 
 function taj_tabs_shortcode( $attr ) {
-	return taj_get_tabs( $attr );
+	$tabs = new Tabs_Bells_Whistles( $attr );
+	return $tabs->get_tabs();
 }
 
 ?>

@@ -1,0 +1,38 @@
+/**
+ * Tabs
+ */
+
+/* Wraps the entire tabbed section. */
+.taj-tabs {}
+
+	/* Unordered list. */
+	.taj-tabs-nav {}
+
+		/* Individual list item. */
+		.taj-tabs-nav .taj-title {}
+
+			/* Link within list item. */
+			.taj-tabs-nav .taj-title a {}
+
+	/* Wraps all of the tab content panels. */
+	.taj-tabs-wrap {}
+
+		/* Individual tab content. */
+		.taj-tabs .taj-content {}
+
+/**
+ * Toggle/Accordion
+ */
+
+/* Wraps the entire toggle/accordion section. */
+.taj-toggle {}
+
+	/* Title for individual section. */
+	.taj-toggle .taj-title {}
+
+		.taj-toggle .taj-title:hover {
+			cursor: pointer;
+		}
+
+	/* Individual toggle section content. */
+	.taj-toggle .taj-content {}
