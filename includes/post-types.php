@@ -82,7 +82,7 @@ function taj_register_post_types() {
 			'name'               => __( 'Tabs',                   'tabs-and-jazz' ),
 			'singular_name'      => __( 'Tab',                    'tabs-and-jazz' ),
 			'menu_name'          => __( 'Tabs',                   'tabs-and-jazz' ),
-			'name_admin_bar'     => __( 'Tabs',                   'tabs-and-jazz' ),
+			'name_admin_bar'     => __( 'Tab',                    'tabs-and-jazz' ),
 			'add_new'            => __( 'Add New',                'tabs-and-jazz' ),
 			'add_new_item'       => __( 'Add New Tab',            'tabs-and-jazz' ),
 			'edit_item'          => __( 'Edit Tab',               'tabs-and-jazz' ),
