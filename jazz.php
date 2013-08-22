@@ -86,6 +86,7 @@ final class Tabs_And_Jazz {
 		require_once( TAJ_INCLUDES . 'post-types.php' );
 		require_once( TAJ_INCLUDES . 'taxonomies.php' );
 		require_once( TAJ_INCLUDES . 'shortcodes.php' );
+		require_once( TAJ_INCLUDES . 'template.php' );
 		require_once( TAJ_INCLUDES . 'widgets.php' );
 	}
 

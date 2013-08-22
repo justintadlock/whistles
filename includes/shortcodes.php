@@ -7,14 +7,7 @@ function taj_register_shortcodes() {
 }
 
 function taj_tabs_shortcode( $attr ) {
-
-	$defaults = array(
-		'tab_group' => '',
-		'style'     => 'tab'
-	);
-
-	return '';
+	return taj_get_tabs( $attr );
 }
-
 
 ?>
