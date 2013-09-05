@@ -85,7 +85,7 @@ final class Whistles_Load {
 
 		require_once( WHISTLES_DIR . 'includes/post-types.php' );
 		require_once( WHISTLES_DIR . 'includes/taxonomies.php' );
-		require_once( WHISTLES_DIR . 'includes/class-tabs-bells-whistles.php' );
+		require_once( WHISTLES_DIR . 'includes/class-whistles-and-bells.php' );
 		require_once( WHISTLES_DIR . 'includes/shortcodes.php' );
 		require_once( WHISTLES_DIR . 'includes/widgets.php' );
 	}
