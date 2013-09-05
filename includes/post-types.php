@@ -2,17 +2,17 @@
 /**
  * File for registering custom post types.
  *
- * @package    TabsAndJazz
+ * @package    Whistles
  * @subpackage Includes
  * @since      0.1.0
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2013, Justin Tadlock
- * @link       http://themehybrid.com/plugins/tabs-and-jazz
+ * @link       http://themehybrid.com/plugins/whistles
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 /* Register custom post types on the 'init' hook. */
-add_action( 'init', 'taj_register_post_types' );
+add_action( 'init', 'whistles_register_post_types' );
 
 /**
  * Registers post types needed by the plugin.
@@ -21,7 +21,7 @@ add_action( 'init', 'taj_register_post_types' );
  * @access public
  * @return void
  */
-function taj_register_post_types() {
+function whistles_register_post_types() {
 
 	/* Set up the arguments for the portfolio item post type. */
 	$args = array(
@@ -37,35 +37,35 @@ function taj_register_post_types() {
 		'delete_with_user'    => false,
 		'hierarchical'        => false,
 		'has_archive'         => false,
-		'query_var'           => 'tab',
-		'capability_type'     => 'tab',
+		'query_var'           => 'whistle',
+		'capability_type'     => 'whistle',
 		'map_meta_cap'        => true,
 
-		/* Only 3 caps are needed: 'manage_tabs', 'create_tabs', and 'edit_tabs'. */
+		/* Only 3 caps are needed: 'manage_whistles', 'create_whistles', and 'edit_whistles'. */
 		'capabilities' => array(
 
 			// meta caps (don't assign these to roles)
-			'edit_post'              => 'edit_tab',
-			'read_post'              => 'read_tab',
-			'delete_post'            => 'delete_tab',
+			'edit_post'              => 'edit_whistle',
+			'read_post'              => 'read_whistle',
+			'delete_post'            => 'delete_whistle',
 
 			// primitive/meta caps
-			'create_posts'           => 'create_tabs',
+			'create_posts'           => 'create_whistles',
 
 			// primitive caps used outside of map_meta_cap()
-			'edit_posts'             => 'edit_tabs',
-			'edit_others_posts'      => 'manage_tabs',
-			'publish_posts'          => 'manage_tabs',
+			'edit_posts'             => 'edit_whistles',
+			'edit_others_posts'      => 'manage_whistles',
+			'publish_posts'          => 'manage_whistles',
 			'read_private_posts'     => 'read',
 
 			// primitive caps used inside of map_meta_cap()
 			'read'                   => 'read',
-			'delete_posts'           => 'manage_tabs',
-			'delete_private_posts'   => 'manage_tabs',
-			'delete_published_posts' => 'manage_tabs',
-			'delete_others_posts'    => 'manage_tabs',
-			'edit_private_posts'     => 'edit_tabs',
-			'edit_published_posts'   => 'edit_tabs'
+			'delete_posts'           => 'manage_whistles',
+			'delete_private_posts'   => 'manage_whistles',
+			'delete_published_posts' => 'manage_whistles',
+			'delete_others_posts'    => 'manage_whistles',
+			'edit_private_posts'     => 'edit_whistles',
+			'edit_published_posts'   => 'edit_whistles'
 		),
 
 		/* The rewrite handles the URL structure. */
@@ -79,24 +79,24 @@ function taj_register_post_types() {
 
 		/* Labels used when displaying the posts. */
 		'labels' => array(
-			'name'               => __( 'Tabs',                   'tabs-and-jazz' ),
-			'singular_name'      => __( 'Tab',                    'tabs-and-jazz' ),
-			'menu_name'          => __( 'Tabs',                   'tabs-and-jazz' ),
-			'name_admin_bar'     => __( 'Tab',                    'tabs-and-jazz' ),
-			'add_new'            => __( 'Add New',                'tabs-and-jazz' ),
-			'add_new_item'       => __( 'Add New Tab',            'tabs-and-jazz' ),
-			'edit_item'          => __( 'Edit Tab',               'tabs-and-jazz' ),
-			'new_item'           => __( 'New Tab',                'tabs-and-jazz' ),
-			'view_item'          => __( 'View Tab',               'tabs-and-jazz' ),
-			'search_items'       => __( 'Search Tabs',            'tabs-and-jazz' ),
-			'not_found'          => __( 'No tabs found',          'tabs-and-jazz' ),
-			'not_found_in_trash' => __( 'No tabs found in trash', 'tabs-and-jazz' ),
-			'all_items'          => __( 'Tabs',                   'tabs-and-jazz' ),
+			'name'               => __( 'Whistles',                   'whistles' ),
+			'singular_name'      => __( 'Whistle',                    'whistles' ),
+			'menu_name'          => __( 'Whistles',                   'whistles' ),
+			'name_admin_bar'     => __( 'Whistle',                    'whistles' ),
+			'add_new'            => __( 'Add New',                    'whistles' ),
+			'add_new_item'       => __( 'Add New Whistle',            'whistles' ),
+			'edit_item'          => __( 'Edit Whistle',               'whistles' ),
+			'new_item'           => __( 'New Whistle',                'whistles' ),
+			'view_item'          => __( 'View Whistle',               'whistles' ),
+			'search_items'       => __( 'Search Whistles',            'whistles' ),
+			'not_found'          => __( 'No whistles found',          'whistles' ),
+			'not_found_in_trash' => __( 'No whistles found in trash', 'whistles' ),
+			'all_items'          => __( 'Whistles',                   'whistles' ),
 		)
 	);
 
 	/* Register the portfolio item post type. */
-	register_post_type( 'tab', $args );
+	register_post_type( 'whistle', $args );
 }
 
 ?>

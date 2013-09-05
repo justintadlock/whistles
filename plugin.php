@@ -25,7 +25,7 @@
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-final class Tabs_And_Jazz {
+final class Whistles_Load {
 
 	/**
 	 * PHP5 constructor method.
@@ -68,16 +68,10 @@ final class Tabs_And_Jazz {
 	public static function constants() {
 
 		/* Set constant path to the plugin directory. */
-		define( 'TAJ_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+		define( 'WHISTLES_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 		/* Set the constant path to the plugin directory URI. */
-		define( 'TAJ_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
-
-		/* Set the constant path to the includes directory. */
-		define( 'TAJ_INCLUDES', TAJ_DIR . trailingslashit( 'includes' ) );
-
-		/* Set the constant path to the admin directory. */
-		define( 'TAJ_ADMIN', TAJ_DIR . trailingslashit( 'admin' ) );
+		define( 'WHISTLES_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 	}
 
 	/**
@@ -89,11 +83,11 @@ final class Tabs_And_Jazz {
 	 */
 	public static function includes() {
 
-		require_once( TAJ_INCLUDES . 'post-types.php' );
-		require_once( TAJ_INCLUDES . 'taxonomies.php' );
-		require_once( TAJ_INCLUDES . 'class-tabs-bells-whistles.php' );
-		require_once( TAJ_INCLUDES . 'shortcodes.php' );
-		require_once( TAJ_INCLUDES . 'widgets.php' );
+		require_once( WHISTLES_DIR . 'includes/post-types.php' );
+		require_once( WHISTLES_DIR . 'includes/taxonomies.php' );
+		require_once( WHISTLES_DIR . 'includes/class-tabs-bells-whistles.php' );
+		require_once( WHISTLES_DIR . 'includes/shortcodes.php' );
+		require_once( WHISTLES_DIR . 'includes/widgets.php' );
 	}
 
 	/**
@@ -106,7 +100,7 @@ final class Tabs_And_Jazz {
 	public static function i18n() {
 
 		/* Load the translation of the plugin. */
-	//	load_plugin_textdomain( 'tabs-and-jazz', false, 'tabs-and-jazz/languages' );
+	//	load_plugin_textdomain( 'whistles', false, 'whistles/languages' );
 	}
 
 	/**
@@ -119,7 +113,7 @@ final class Tabs_And_Jazz {
 	public static function admin() {
 
 		if ( is_admin() )
-			require_once( TAJ_ADMIN . 'admin.php' );
+			require_once( WHISTLES_DIR . 'admin/admin.php' );
 	}
 
 	public static function enqueue_scripts() {
@@ -129,8 +123,8 @@ final class Tabs_And_Jazz {
 
 		/* Enqueue the stylesheet. */
 		wp_enqueue_style(
-			'tabs-and-jazz',
-			trailingslashit( plugin_dir_url( __FILE__ ) ) . "css/tabs-and-jazz$suffix.css",
+			'whistles',
+			trailingslashit( plugin_dir_url( __FILE__ ) ) . "css/whistles$suffix.css",
 			null,
 			'20130123'
 		);
@@ -151,8 +145,8 @@ final class Tabs_And_Jazz {
 		<script>
 		jQuery( document ).ready(
 			function() {
-				jQuery( '.taj-tabs' ).tabs();
-				jQuery( '.taj-toggle' ).accordion();
+				jQuery( '.whistles-tabs' ).tabs();
+				jQuery( '.whistles-toggle' ).accordion();
 			}
 		);
 		</script>
@@ -173,13 +167,13 @@ final class Tabs_And_Jazz {
 		/* If the administrator role exists, add required capabilities for the plugin. */
 		if ( !empty( $role ) ) {
 
-			$role->add_cap( 'manage_tabs' );
-			$role->add_cap( 'create_tabs' );
-			$role->add_cap( 'edit_tabs'   );
+			$role->add_cap( 'manage_whistles' );
+			$role->add_cap( 'create_whistles' );
+			$role->add_cap( 'edit_whistles'   );
 		}
 	}
 }
 
-Tabs_And_Jazz::setup();
+Whistles_Load::setup();
 
 ?>

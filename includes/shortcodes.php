@@ -1,14 +1,14 @@
 <?php
 
-add_action( 'init', 'taj_register_shortcodes' );
+add_action( 'init', 'whistles_register_shortcodes' );
 
-function taj_register_shortcodes() {
-	add_shortcode( 'tabs', 'taj_tabs_shortcode' );
+function whistles_register_shortcodes() {
+	add_shortcode( 'whistles', 'whistles_tabs_shortcode' );
 }
 
-function taj_tabs_shortcode( $attr ) {
-	$tabs = new Tabs_Bells_Whistles( $attr );
-	return $tabs->get_tabs();
+function whistles_tabs_shortcode( $attr ) {
+	$tabs = new Whistles_And_Bells( $attr );
+	return $tabs->get_whistles();
 }
 
 ?>

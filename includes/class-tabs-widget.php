@@ -5,7 +5,7 @@
  *
  * @since 0.1.0
  */
-class TAJ_Widget_Tabs extends WP_Widget {
+class Whistles_Widget extends WP_Widget {
 
 	/**
 	 * Set up the widget's unique name, ID, class, description, and other options.
@@ -16,8 +16,8 @@ class TAJ_Widget_Tabs extends WP_Widget {
 
 		/* Set up the widget options. */
 		$widget_options = array(
-			'classname'   => 'taj',
-			'description' => esc_html__( 'Bells and whistles.', 'tabs-and-jazz' )
+			'classname'   => 'whistles',
+			'description' => esc_html__( 'Bells and whistles.', 'whistles' )
 		);
 
 		/* Set up the widget control options. */
@@ -28,8 +28,8 @@ class TAJ_Widget_Tabs extends WP_Widget {
 
 		/* Create the widget. */
 		$this->WP_Widget(
-			'taj',                         // $this->id_base
-			__( 'Tabs', 'tabs-and-jazz' ), // $this->name
+			'whistles',                     // $this->id_base
+			__( 'Whistles', 'whistles' ),  // $this->name
 			$widget_options,               // $this->widget_options
 			$control_options               // $this->control_options
 		);
@@ -65,9 +65,8 @@ class TAJ_Widget_Tabs extends WP_Widget {
 		if ( !empty( $instance['title'] ) )
 			echo $before_title . apply_filters( 'widget_title',  $instance['title'], $instance, $this->id_base ) . $after_title;
 
-
-		$tabs = new Tabs_Bells_Whistles( $args );
-		echo $tabs->get_tabs();
+		$tabs = new Whistles_And_Bells( $args );
+		echo $tabs->get_whistles();
 
 		/* Close the theme's widget wrapper. */
 		echo $after_widget;
@@ -125,33 +124,33 @@ class TAJ_Widget_Tabs extends WP_Widget {
 
 		/* Create an array of archive types. */
 		$type = array( 
-			'tabs'   => esc_attr__( 'Tabs',   'tabs-and-jazz' ), 
-			'toggle' => esc_attr__( 'Toggle', 'tabs-and-jazz' ), 
+			'tabs'   => esc_attr__( 'Tabs',   'whistles' ), 
+			'toggle' => esc_attr__( 'Toggle', 'whistles' ), 
 		);
 
 		/* Create an array of order options. */
 		$order = array(
-			'ASC'  => esc_attr__( 'Ascending', 'tabs-and-jazz' ),
-			'DESC' => esc_attr__( 'Descending', 'tabs-and-jazz' )
+			'ASC'  => esc_attr__( 'Ascending', 'whistles' ),
+			'DESC' => esc_attr__( 'Descending', 'whistles' )
 		);
 
 		/* Create an array of orderby options. */
 		$orderby = array( 
-			'author' => esc_attr__( 'Author', 'tabs-and-jazz' ),
-			'date'   => esc_attr__( 'Date', 'tabs-and-jazz' ),
-			'ID'     => esc_attr__( 'ID', 'tabs-and-jazz' ),  
-			'rand'   => esc_attr__( 'Random', 'tabs-and-jazz' ),
-			'name'   => esc_attr__( 'Slug', 'tabs-and-jazz' ),
-			'title'  => esc_attr__( 'Title', 'tabs-and-jazz' ),
+			'author' => esc_attr__( 'Author', 'whistles' ),
+			'date'   => esc_attr__( 'Date',   'whistles' ),
+			'ID'     => esc_attr__( 'ID',     'whistles' ),  
+			'rand'   => esc_attr__( 'Random', 'whistles' ),
+			'name'   => esc_attr__( 'Slug',   'whistles' ),
+			'title'  => esc_attr__( 'Title',  'whistles' ),
 		);
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'tabs-and-jazz' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'whistles' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'type' ); ?>"><code>type</code></label> 
+			<label for="<?php echo $this->get_field_id( 'type' ); ?>"><?php _e( 'Type:', 'whistles' ); ?></label> 
 			<select class="widefat" id="<?php echo $this->get_field_id( 'type' ); ?>" name="<?php echo $this->get_field_name( 'type' ); ?>">
 				<?php foreach ( $type as $option_value => $option_label ) { ?>
 					<option value="<?php echo esc_attr( $option_value ); ?>" <?php selected( $instance['type'], $option_value ); ?>><?php echo esc_html( $option_label ); ?></option>
@@ -159,7 +158,7 @@ class TAJ_Widget_Tabs extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'group' ); ?>"><code>group</code></label> 
+			<label for="<?php echo $this->get_field_id( 'group' ); ?>"><?php _e( 'Group:', 'whistles' ); ?></label> 
 			<select class="widefat" id="<?php echo $this->get_field_id( 'group' ); ?>" name="<?php echo $this->get_field_name( 'group' ); ?>">
 				<?php foreach ( $terms as $term ) { ?>
 					<option value="<?php echo esc_attr( $term->slug ); ?>" <?php selected( $instance['group'], $term->slug ); ?>><?php echo esc_html( $term->name ); ?></option>
@@ -167,11 +166,11 @@ class TAJ_Widget_Tabs extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'limit' ); ?>"><code>limit</code></label>
+			<label for="<?php echo $this->get_field_id( 'limit' ); ?>"><?php _e( 'Limit:', 'whistles' ); ?></label>
 			<input type="text" class="code" id="<?php echo $this->get_field_id( 'limit' ); ?>" name="<?php echo $this->get_field_name( 'limit' ); ?>" value="<?php echo esc_attr( $instance['limit'] ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'order' ); ?>"><code>order</code></label> 
+			<label for="<?php echo $this->get_field_id( 'order' ); ?>"><?php _e( 'Order', 'whistles' ); ?></label> 
 			<select class="widefat" id="<?php echo $this->get_field_id( 'order' ); ?>" name="<?php echo $this->get_field_name( 'order' ); ?>">
 				<?php foreach ( $order as $option_value => $option_label ) { ?>
 					<option value="<?php echo esc_attr( $option_value ); ?>" <?php selected( $instance['order'], $option_value ); ?>><?php echo esc_html( $option_label ); ?></option>
@@ -179,7 +178,7 @@ class TAJ_Widget_Tabs extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'orderby' ); ?>"><code>orderby</code></label> 
+			<label for="<?php echo $this->get_field_id( 'orderby' ); ?>"><?php _e( 'Order By:', 'whistles' ); ?></label> 
 			<select class="widefat" id="<?php echo $this->get_field_id( 'orderby' ); ?>" name="<?php echo $this->get_field_name( 'orderby' ); ?>">
 				<?php foreach ( $orderby as $option_value => $option_label ) { ?>
 					<option value="<?php echo esc_attr( $option_value ); ?>" <?php selected( $instance['orderby'], $option_value ); ?>><?php echo esc_html( $option_label ); ?></option>
