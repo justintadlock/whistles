@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Tabs and Jazz
- * Plugin URI: https://github.com/justintadlock/tabs-and-jazz
+ * Plugin Name: Whistles
+ * Plugin URI: https://github.com/justintadlock/whistles
  * Description: Tabs, accordions, and all that other jazz.
  * Version: 0.1
  * Author: Justin Tadlock
@@ -16,12 +16,12 @@
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @package   TabsAndJazz
+ * @package   Whistles
  * @version   0.1.0
  * @since     0.1.0
  * @author    Justin Tadlock <justin@justintadlock.com>
  * @copyright Copyright (c) 2013, Justin Tadlock
- * @link      https://github.com/justintadlock/tabs-and-jazz
+ * @link      https://github.com/justintadlock/whistles
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
