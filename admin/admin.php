@@ -79,7 +79,7 @@ function my_media_buttons( $editor_id ) {
 	global $post;
 
 	if ( 'whistle' !== $post->post_type )
-		echo '<a href="#TB_inline?width=200&height=530&inlineId=whistles-shortcode-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Add Whistles' ) . '">' . __( 'Add Whistles' ) . '</a>';
+		echo '<a href="#TB_inline?width=200&amp;height=530&amp;inlineId=whistles-shortcode-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Add Whistles' ) . '">' . __( 'Add Whistles' ) . '</a>';
 }
 
 /* @todo - only add on the post new/edit page in the admin. */
@@ -154,6 +154,18 @@ function whistles_editor_shortcode_popup() {
 	<div id="whistles-shortcode-popup" style="display:none;">
 
 		<div class="wrap">
+
+		<?php if ( empty( $terms ) ) { ?>
+			<p>
+				<?php _e( 'You need at least one whistle group to display whistles.', 'whistles' ); ?> 
+				<?php if ( current_user_can( 'manage_whistles' ) ) { ?>
+					<a href="<?php echo admin_url( 'edit-tags.php?taxonomy=whistle_group&post_type=whistle' ); ?>"><?php _e( 'Whistle Groups &rarr;', 'whistles' ); ?></a>
+				<?php } ?>
+			</p>
+			<p class="submitbox">
+				<a class="button-secondary" href="#" onclick="tb_remove(); return false;"><?php _e( 'Cancel', 'whistles' ); ?></a>
+			</p>
+		<?php } else { ?>
 			<p>
 				<?php _e( 'Type', 'whistles' ); ?>
 				<?php foreach ( $type as $option_value => $option_label ) { ?>
@@ -200,6 +212,8 @@ function whistles_editor_shortcode_popup() {
 				<input type="submit" id="whistles-submit" value="<?php esc_attr_e( 'Insert Whistles', 'whistles' ); ?>" class="button-primary" onclick="whistles_insert_shortcode();" />
 				<a class="button-secondary" href="#" onclick="tb_remove(); return false;"><?php _e( 'Cancel', 'whistles' ); ?></a>
 			</p>
+		<?php } ?>
+
 		</div>
 	</div>
 <?php

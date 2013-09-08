@@ -144,6 +144,16 @@ class Whistles_Widget extends WP_Widget {
 		);
 		?>
 
+		<?php if ( empty( $terms ) ) { ?>
+
+			<p>
+				<?php _e( 'You need at least one whistle group to display whistles.', 'whistles' ); ?> 
+				<?php if ( current_user_can( 'manage_whistles' ) ) { ?>
+					<a href="<?php echo admin_url( 'edit-tags.php?taxonomy=whistle_group&post_type=whistle' ); ?>"><?php _e( 'Whistle Groups &rarr;', 'whistles' ); ?></a>
+				<?php } ?>
+			</p>
+
+		<?php } else { ?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'whistles' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
@@ -184,6 +194,7 @@ class Whistles_Widget extends WP_Widget {
 				<?php } ?>
 			</select>
 		</p>
+		<?php } ?>
 	<?php
 	}
 }
