@@ -51,6 +51,9 @@ final class Whistles_Load {
 		/* Enqueue scripts and styles. */
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );
 
+		/* Filter current_theme_supports for easier conditionals. */
+		add_filter( 'current_theme_supports-whistles', array( __CLASS__, 'current_theme_supports' ), 10, 3 );
+
 		/* Register activation hook. */
 		register_activation_hook( __FILE__, array( __CLASS__, 'activation' ) );
 	}
@@ -125,6 +128,9 @@ final class Whistles_Load {
 	 */
 	public static function enqueue_styles() {
 
+		if ( current_theme_supports( 'whistles', 'styles' ) )
+			return;
+
 		/* Use the .min stylesheet if SCRIPT_DEBUG is turned off. */
 		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
@@ -135,6 +141,35 @@ final class Whistles_Load {
 			null,
 			'20130908'
 		);
+	}
+
+	/**
+	 * Filter on 'current_theme_supports-whistles'.  This allows us to check if the theme supports specific 
+	 * parts of the whistles plugins like 'scripts' and 'styles'.
+	 *
+	 * @since  0.1.0
+	 * @access public
+	 * @param  bool    $supports
+	 * @param  array   $args
+	 * @param  array   $feature
+	 * @return bool
+	 */
+	public static function current_theme_supports( $supports, $args, $feature ) {
+
+		if ( isset( $args[0] ) ) {
+
+			$check = $args[0];
+
+			if ( in_array( $check, array( 'scripts', 'styles' ) ) ) {
+
+				if ( is_array( $feature[0] ) && isset( $feature[0][ $check ] ) && true === $feature[0][ $check ] )
+					$supports = true;
+				else
+					$supports = false;
+			}
+		}
+
+		return $supports;
 	}
 
 	/**

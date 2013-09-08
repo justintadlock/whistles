@@ -3,7 +3,9 @@
 class Whistles_And_Toggles extends Whistles_And_Bells {
 
 	public function format() {
-		wp_enqueue_script( 'whistles', WHISTLES_URI . 'js/whistles.js', array( 'jquery' ) );
+
+		if ( !current_theme_supports( 'whistles', 'scripts' ) )
+			wp_enqueue_script( 'whistles', WHISTLES_URI . 'js/whistles.js', array( 'jquery' ) );
 
 		$output = '';
 
