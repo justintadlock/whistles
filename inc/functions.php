@@ -29,7 +29,7 @@ function whistles_register_shortcodes() {
  */
 function whistles_register_widgets() {
 
-	require_once( WHISTLES_DIR . 'includes/class-whistles-widget.php' );
+	require_once( WHISTLES_DIR . 'inc/class-whistles-widget.php' );
 
 	register_widget( 'WHISTLES_WIDGET' );
 }

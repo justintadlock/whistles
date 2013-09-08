@@ -83,12 +83,12 @@ final class Whistles_Load {
 	 */
 	public static function includes() {
 
-		require_once( WHISTLES_DIR . 'includes/post-types.php' );
-		require_once( WHISTLES_DIR . 'includes/taxonomies.php' );
-		require_once( WHISTLES_DIR . 'includes/class-whistles-and-bells.php' );
-		require_once( WHISTLES_DIR . 'includes/class-whistles-and-tabs.php' );
-		require_once( WHISTLES_DIR . 'includes/class-whistles-and-toggles.php' );
-		require_once( WHISTLES_DIR . 'includes/functions.php' );
+		require_once( WHISTLES_DIR . 'inc/post-types.php' );
+		require_once( WHISTLES_DIR . 'inc/taxonomies.php' );
+		require_once( WHISTLES_DIR . 'inc/class-whistles-and-bells.php' );
+		require_once( WHISTLES_DIR . 'inc/class-whistles-and-tabs.php' );
+		require_once( WHISTLES_DIR . 'inc/class-whistles-and-toggles.php' );
+		require_once( WHISTLES_DIR . 'inc/functions.php' );
 	}
 
 	/**
