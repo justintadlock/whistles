@@ -13,7 +13,7 @@ class Whistles_And_Bells {
 		$defaults = array(
 			'group'   => '', // 'whistle_group' term slug or term ID.
 			'limit'   => -1, // Display specific number of whistles from group. Defaults to show all.
-			'type'    => 'tabs',
+		//	'type'    => 'tabs',
 			'active'  => 1,
 			'order'   => 'DESC',
 			'orderby' => 'post_date',
@@ -22,11 +22,21 @@ class Whistles_And_Bells {
 		$this->args = wp_parse_args( $args, $defaults );
 
 		$this->set_whistles();
-		$this->format_whistles();
+
+		if ( !empty( $this->whistles ) ) {
+
+			$this->html = $this->format();
+
+			add_action( 'wp_footer', array( $this, 'print_scripts' ) );
+		}
+	}
+
+	public function get_html() {
+		return $this->html;
 	}
 
 	public function get_whistles() {
-		return $this->html;
+		return $this->whistles;
 	}
 
 	public function set_whistles() {
@@ -71,70 +81,8 @@ class Whistles_And_Bells {
 		$this->whistles = $whistles;
 	}
 
-	public function format_whistles() {
-
-		if ( 'tabs' == $this->args['type'] )
-			$this->format_tabs();
-
-		elseif ( 'toggle' == $this->args['type'] )
-			$this->format_toggle();
-	}
-
-	public function format_tabs() {
-
-		$output = '';
-
-		if ( !empty( $this->whistles ) ) {
-
-			$output .= '<div class="whistles-tabs">';
-
-			$output .= '<ul class="whistles-tabs-nav">';
-
-			$i = 1;
-
-			foreach ( $this->whistles as $whistle ) {
-
-				$id = sanitize_html_class( 'whistle-' . $this->args['group'] . '-' . $whistle['id'] );
-
-				$output .= '<li class="whistles-title"><a href="#' . $id . '">' . $whistle['title'] . '</a></li>';
-			}
-
-			$output .= '</ul>';
-
-			$output .= '<div class="whistles-tabs-wrap">';
-
-			foreach ( $this->whistles as $whistle ) {
-
-				$id = sanitize_html_class( 'whistle-' . $this->args['group'] . '-' . $whistle['id'] );
-
-				$output .= '<div id="' . $id . '" class="whistle-content">' . $whistle['content'] . '</div>';
-			}
-
-			$output .= '</div>';
-		}
-
-		$this->html = $output;
-	}
-
-	public function format_toggle() {
-
-		$output = '';
-
-		if ( !empty( $this->whistles ) ) {
-
-			$output .= '<div class="whistles-toggle">';
-
-			foreach ( $this->whistles as $whistle ) {
-
-				$output .= '<h3 class="whistle-title">' . $whistle['title'] . '</h3>';
-
-				$output .= '<div class="whistle-content">' . $whistle['content'] . '</div>';
-			}
-
-			$output .= '</div>';
-		}
-
-		$this->html = $output;
+	/** Must be overriden in a sub-class. */
+	public function format() {
 	}
 }
 

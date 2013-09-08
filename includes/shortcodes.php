@@ -7,8 +7,7 @@ function whistles_register_shortcodes() {
 }
 
 function whistles_tabs_shortcode( $attr ) {
-	$tabs = new Whistles_And_Bells( $attr );
-	return $tabs->get_whistles();
+	return whistles_get_whistles( $attr );
 }
 
 ?>

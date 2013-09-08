@@ -3,7 +3,7 @@
  * Plugin Name: Whistles
  * Plugin URI: https://github.com/justintadlock/whistles
  * Description: Tabs, accordions, and all that other jazz.
- * Version: 0.1
+ * Version: 0.1.0-alpha-1
  * Author: Justin Tadlock
  * Author URI: http://justintadlock.com
  *
@@ -28,7 +28,7 @@
 final class Whistles_Load {
 
 	/**
-	 * PHP5 constructor method.
+	 * Plugin setup.
 	 *
 	 * @since  0.1.0
 	 * @access public
@@ -49,10 +49,7 @@ final class Whistles_Load {
 		add_action( 'plugins_loaded', array( __CLASS__, 'admin' ), 4 );
 
 		/* Enqueue scripts and styles. */
-		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
-
-		/* Print scripts in the header. */
-		add_action( 'wp_head', array( __CLASS__, 'print_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );
 
 		/* Register activation hook. */
 		register_activation_hook( __FILE__, array( __CLASS__, 'activation' ) );
@@ -86,7 +83,10 @@ final class Whistles_Load {
 		require_once( WHISTLES_DIR . 'includes/post-types.php' );
 		require_once( WHISTLES_DIR . 'includes/taxonomies.php' );
 		require_once( WHISTLES_DIR . 'includes/class-whistles-and-bells.php' );
+		require_once( WHISTLES_DIR . 'includes/class-whistle-and-tab.php' );
+		require_once( WHISTLES_DIR . 'includes/class-whistle-and-toggle.php' );
 		require_once( WHISTLES_DIR . 'includes/shortcodes.php' );
+		require_once( WHISTLES_DIR . 'includes/template.php' );
 		require_once( WHISTLES_DIR . 'includes/widgets.php' );
 	}
 
@@ -100,7 +100,7 @@ final class Whistles_Load {
 	public static function i18n() {
 
 		/* Load the translation of the plugin. */
-	//	load_plugin_textdomain( 'whistles', false, 'whistles/languages' );
+		load_plugin_textdomain( 'whistles', false, 'whistles/languages' );
 	}
 
 	/**
@@ -116,41 +116,26 @@ final class Whistles_Load {
 			require_once( WHISTLES_DIR . 'admin/admin.php' );
 	}
 
-	public static function enqueue_scripts() {
+	/**
+	 * Loads the stylesheet for the plugin.
+	 *
+	 * @since  0.1.0
+	 * @access public
+	 * @return void
+	 */
+	public static function enqueue_styles() {
 
 		/* Use the .min stylesheet if SCRIPT_DEBUG is turned off. */
-		$suffix = ''; // ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 		/* Enqueue the stylesheet. */
 		wp_enqueue_style(
 			'whistles',
 			trailingslashit( plugin_dir_url( __FILE__ ) ) . "css/whistles$suffix.css",
 			null,
-			'20130123'
+			'20130908'
 		);
-
-		/* Load the jQuery UI Tabs and Accordion scripts. */
-		wp_enqueue_script( 'jquery-ui-tabs' );
-		wp_enqueue_script( 'jquery-ui-accordion' );
 	}
-
-	/**
-	 * Enables tabs and toggles using jQuery UI.
-	 *
-	 * @since  0.1.0
-	 * @access public
-	 * @return void
-	 */
-	public static function print_scripts() { ?>
-		<script>
-		jQuery( document ).ready(
-			function() {
-				jQuery( '.whistles-tabs' ).tabs();
-				jQuery( '.whistles-toggle' ).accordion();
-			}
-		);
-		</script>
-	<?php }
 
 	/**
 	 * Method that runs only when the plugin is activated.

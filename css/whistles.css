@@ -1,38 +1,124 @@
+
+.whistles {
+	font-family: Georgia, sans-serif;
+	line-height: 1.5;
+	clear: both;
+	width: 100%;
+	margin: 0 0 1.5rem;
+}
+
+.whistles::after,
+.whistle-content::after {
+	content:    ".";
+	display:    block;
+	height:     0;
+	clear:      both;
+	visibility: hidden;
+}
+
+.whistle-title:hover {
+			cursor: pointer;
+}
+
 /**
  * Tabs
  */
 
 /* Wraps the entire tabbed section. */
-.taj-tabs {}
+.whistles-tabs {}
 
 	/* Unordered list. */
-	.taj-tabs-nav {}
+	.whistles-tabs-nav {
+		list-style: none;
+		margin: 0;
+	}
 
 		/* Individual list item. */
-		.taj-tabs-nav .taj-title {}
+		.whistles-tabs-nav li {
+			display: inline-block;
+		}
 
 			/* Link within list item. */
-			.taj-tabs-nav .taj-title a {}
+			.whistles-tabs-nav li a {
+				display: inline-block;
+				padding: 0.5rem 1.5rem;
+				font-size: 0.75em;
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+				color: #777;
+
+			background: #f5f5f5;
+				border:   1px solid #ececec;
+				border-right-width: 0;
+			}
+
+			.whistles-tabs-nav li:last-child a {
+				border-right-width: 1px;
+			}
+
+			.whistles-tabs-nav li a:hover {
+		background: #f9f9f9;
+			color: #555;
+			}
+			.whistles-tabs-nav li[aria-selected="true"] a {
+		background: #fff;
+			color: #555;
+				border-bottom-color: #fff;
+			}
 
 	/* Wraps all of the tab content panels. */
-	.taj-tabs-wrap {}
+	.whistles-tabs-wrap {
+		margin: -1px 0 0;
+		padding: 1.5rem 1.5rem 0 1.5rem;
+		color: #666;
+		background: #fff;
+		border:   1px solid #ececec;
+	}
 
 		/* Individual tab content. */
-		.taj-tabs .taj-content {}
+		.whistles-tabs-wrap .whistle-content {}
 
 /**
  * Toggle/Accordion
  */
 
 /* Wraps the entire toggle/accordion section. */
-.taj-toggle {}
+.whistles-toggle {
+}
 
 	/* Title for individual section. */
-	.taj-toggle .taj-title {}
+	.whistles-toggle .whistle-title {
+		margin: 0;
+				padding: 0.5rem 1.5rem;
+				font-size: 0.75em;
+				/*text-transform: uppercase;*/
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+				color: #777;
+				background: #f5f5f5;
+		border:   1px solid #ececec;
+				border-top-width: 0;
+	}
+		.whistles-toggle .whistle-title:first-child {
+			border-top-width: 1px;
+		}
 
-		.taj-toggle .taj-title:hover {
-			cursor: pointer;
+		.whistles-toggle .whistle-title:hover,
+		.whistles-toggle .whistle-title[aria-selected="true"] {
+			color: #555;
+			background: #ededed;
+		}
+
+		.whistles-toggle .whistle-title:last-child {
 		}
 
 	/* Individual toggle section content. */
-	.taj-toggle .taj-content {}
+	.whistles-toggle .whistle-content {
+			-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin: -1px 0 0;
+		padding: 1.5rem 1.5rem 0 1.5rem;
+		color: #666;
+		background: #fff;
+		border:   1px solid #ececec;
+	}

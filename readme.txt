@@ -1,8 +1,8 @@
-===Tabs and Jazz===
+## Whistles
 
-This is a tabs, accordions, etc. plugin currently being built as the ultimate tabs plugin.
+This is a tabs, toggle, etc. plugin currently being built as the ultimate tabs plugin.
 
-The plan:
+### The plan:
 
 * The plugin can display content via tab, accordion, etc.
 * `tab` post type. Each tab is registered as a post.  The tab content is whatever the users enters into the post editor.
@@ -10,7 +10,7 @@ The plan:
 * `[tabs group="example" type="tab"]` shortcode for displaying tabs in shortcode areas.
 * Tabs widget - option to select the tab group.
 
-The reason for doing it this way:
+### The reason for doing it this way:
 
 * Allows users to easily manage their tabs with whatever content they want.
 * No crazy stuff messing with content filters like we see some themes doing.

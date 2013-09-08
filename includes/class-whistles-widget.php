@@ -65,8 +65,7 @@ class Whistles_Widget extends WP_Widget {
 		if ( !empty( $instance['title'] ) )
 			echo $before_title . apply_filters( 'widget_title',  $instance['title'], $instance, $this->id_base ) . $after_title;
 
-		$tabs = new Whistles_And_Bells( $args );
-		echo $tabs->get_whistles();
+		echo whistles_get_whistles( $args );
 
 		/* Close the theme's widget wrapper. */
 		echo $after_widget;
@@ -99,7 +98,7 @@ class Whistles_Widget extends WP_Widget {
 	 */
 	function form( $instance ) {
 
-		$terms = get_terms( 'tab_group' );
+		$terms = get_terms( 'whistle_group' );
 
 		if ( !empty( $terms ) && !is_wp_error( $terms ) ) {
 			$all_terms = $terms;

@@ -76,7 +76,10 @@ function whistles_parent_file( $parent_file = '' ) {
 
 /* @todo - only add on the post new/edit page in the admin. */
 function my_media_buttons( $editor_id ) {
-	echo '<a href="#TB_inline?width=200&height=530&inlineId=whistles-shortcode-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Add Whistles' ) . '">' . __( 'Add Whistles' ) . '</a>';
+	global $post;
+
+	if ( 'whistle' !== $post->post_type )
+		echo '<a href="#TB_inline?width=200&height=530&inlineId=whistles-shortcode-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Add Whistles' ) . '">' . __( 'Add Whistles' ) . '</a>';
 }
 
 /* @todo - only add on the post new/edit page in the admin. */

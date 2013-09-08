@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Custom Content Portfolio WordPress Plugin\n"
+"Project-Id-Version: Whistles WordPress Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-28 02:57-0600\n"
-"PO-Revision-Date: 2013-01-28 02:58-0600\n"
-"Last-Translator: Justin Tadlock <justin@justintadlock.com>\n"
+"POT-Creation-Date: 2013-09-08 15:14-0600\n"
+"PO-Revision-Date: 2013-09-08 15:14-0600\n"
+"Last-Translator: \n"
 "Language-Team:  <justin@justintadlock.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -16,130 +16,206 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: uninstall.php:15
-#, php-format
-msgid "%s should only be called when uninstalling the plugin."
+#: admin/admin.php:79
+#, fuzzy
+msgid "Add Whistles"
+msgstr "Bewerk"
+
+#: admin/admin.php:86 includes/class-tabs-widget.php:126
+msgid "Tabs"
 msgstr ""
 
-#: admin/admin.php:56 includes/post-types.php:97 includes/post-types.php:99
-msgid "Portfolio Item"
+#: admin/admin.php:87 includes/class-tabs-widget.php:127
+msgid "Toggle"
 msgstr ""
 
-#: admin/admin.php:60
-msgid "Thumbnail"
+#: admin/admin.php:102 includes/class-tabs-widget.php:132
+msgid "Ascending"
 msgstr ""
 
-#: admin/admin.php:62 includes/post-types.php:98 includes/post-types.php:111
-#: includes/taxonomies.php:58 includes/taxonomies.php:60
-msgid "Portfolio"
+#: admin/admin.php:103 includes/class-tabs-widget.php:133
+msgid "Descending"
 msgstr ""
 
-#: admin/admin.php:111
-msgid "Project Info"
+#: admin/admin.php:108 includes/class-tabs-widget.php:138
+#, fuzzy
+msgid "Author"
+msgstr "Primaire Auteur"
+
+#: admin/admin.php:109 includes/class-tabs-widget.php:139
+msgid "Date"
 msgstr ""
 
-#: admin/admin.php:134
-msgid "Project <abbr title=\"Uniform Resource Locator\">URL</abbr>"
+#: admin/admin.php:110 includes/class-tabs-widget.php:140
+msgid "ID"
 msgstr ""
 
-#: admin/admin.php:201
-msgid "Portfolio Settings"
+#: admin/admin.php:111 includes/class-tabs-widget.php:141
+msgid "Random"
 msgstr ""
 
-#: admin/admin.php:211
-msgid "Portfolio archive"
+#: admin/admin.php:112 includes/class-tabs-widget.php:142
+msgid "Slug"
 msgstr ""
 
-#: admin/admin.php:219
-msgid "Portfolio taxonomy slug"
+#: admin/admin.php:113 includes/class-tabs-widget.php:143
+msgid "Title"
+msgstr "Titel"
+
+#: admin/admin.php:124 admin/admin.php:131
+#, fuzzy
+msgid "Insert"
+msgstr "Inserts voor Footer:"
+
+#: admin/admin.php:155
+#, fuzzy
+msgid "Type"
+msgstr "Type:"
+
+#: admin/admin.php:164
+msgid "Group"
 msgstr ""
 
-#: admin/admin.php:227
-msgid "Portfolio item slug"
+#: admin/admin.php:174
+msgid "Number of whistles to display"
 msgstr ""
 
-#: includes/post-types.php:96 includes/post-types.php:108
-msgid "Portfolio Items"
+#: admin/admin.php:178 includes/class-tabs-widget.php:172
+#, fuzzy
+msgid "Order"
+msgstr "Volgorde:"
+
+#: admin/admin.php:187
+#, fuzzy
+msgid "Order By"
+msgstr "Sorteer op:"
+
+#: admin/admin.php:197
+msgid "Insert Whistles"
 msgstr ""
 
-#: includes/post-types.php:100
+#: admin/admin.php:198
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-tabs-widget.php:20
+msgid "Bells and whistles."
+msgstr ""
+
+#: includes/class-tabs-widget.php:32 includes/post-types.php:82
+#: includes/post-types.php:84 includes/post-types.php:94
+msgid "Whistles"
+msgstr ""
+
+#: includes/class-tabs-widget.php:148
+msgid "Title:"
+msgstr "Titel"
+
+#: includes/class-tabs-widget.php:152
+msgid "Type:"
+msgstr "Type:"
+
+#: includes/class-tabs-widget.php:160
+msgid "Group:"
+msgstr ""
+
+#: includes/class-tabs-widget.php:168
+msgid "Limit:"
+msgstr "Limiet:"
+
+#: includes/class-tabs-widget.php:180
+msgid "Order By:"
+msgstr "Sorteer op:"
+
+#: includes/post-types.php:83 includes/post-types.php:85
+msgid "Whistle"
+msgstr ""
+
+#: includes/post-types.php:86
 msgid "Add New"
 msgstr ""
 
-#: includes/post-types.php:101
-msgid "Add New Portfolio Item"
+#: includes/post-types.php:87
+msgid "Add New Whistle"
 msgstr ""
 
-#: includes/post-types.php:102
-msgid "Edit Portfolio Item"
+#: includes/post-types.php:88
+#, fuzzy
+msgid "Edit Whistle"
+msgstr "Bewerk"
+
+#: includes/post-types.php:89
+msgid "New Whistle"
 msgstr ""
 
-#: includes/post-types.php:103
-msgid "New Portfolio Item"
+#: includes/post-types.php:90
+msgid "View Whistle"
 msgstr ""
 
-#: includes/post-types.php:104
-msgid "View Portfolio Item"
+#: includes/post-types.php:91
+#, fuzzy
+msgid "Search Whistles"
+msgstr "Doorzoek deze site"
+
+#: includes/post-types.php:92
+msgid "No whistles found"
 msgstr ""
 
-#: includes/post-types.php:105
-msgid "Search Portfolio"
+#: includes/post-types.php:93
+msgid "No whistles found in trash"
 msgstr ""
 
-#: includes/post-types.php:106
-msgid "No portfolio items found"
+#: includes/taxonomies.php:49 includes/taxonomies.php:51
+msgid "Whistle Groups"
 msgstr ""
 
-#: includes/post-types.php:107
-msgid "No portfolio items found in trash"
+#: includes/taxonomies.php:50 includes/taxonomies.php:52
+msgid "Whistle Group"
 msgstr ""
 
-#: includes/taxonomies.php:57 includes/taxonomies.php:59
-msgid "Portfolios"
+#: includes/taxonomies.php:53
+#, fuzzy
+msgid "Search Whistle Groups"
+msgstr "Doorzoek deze site"
+
+#: includes/taxonomies.php:54
+msgid "Popular Whistle Groups"
+msgstr ""
+
+#: includes/taxonomies.php:55
+msgid "All Whistle Groups"
+msgstr ""
+
+#: includes/taxonomies.php:56
+msgid "Edit Whistle Group"
+msgstr ""
+
+#: includes/taxonomies.php:57
+msgid "View Whistle Group"
+msgstr ""
+
+#: includes/taxonomies.php:58
+msgid "Update Whistle Group"
+msgstr ""
+
+#: includes/taxonomies.php:59
+msgid "Add New Whistle Group"
+msgstr ""
+
+#: includes/taxonomies.php:60
+msgid "New Whistle Group Name"
 msgstr ""
 
 #: includes/taxonomies.php:61
-msgid "Search Portfolios"
+msgid "Separate whistle groups with commas"
 msgstr ""
 
 #: includes/taxonomies.php:62
-msgid "Popular Portfolios"
+msgid "Add or remove whistle groups"
 msgstr ""
 
 #: includes/taxonomies.php:63
-msgid "All Portfolios"
-msgstr ""
-
-#: includes/taxonomies.php:64
-msgid "Edit Portfolio"
-msgstr ""
-
-#: includes/taxonomies.php:65
-msgid "View Portfolio"
-msgstr ""
-
-#: includes/taxonomies.php:66
-msgid "Update Portfolio"
-msgstr ""
-
-#: includes/taxonomies.php:67
-msgid "Add New Portfolio"
-msgstr ""
-
-#: includes/taxonomies.php:68
-msgid "New Portfolio Name"
-msgstr ""
-
-#: includes/taxonomies.php:69
-msgid "Separate portfolios with commas"
-msgstr ""
-
-#: includes/taxonomies.php:70
-msgid "Add or remove portfolios"
-msgstr ""
-
-#: includes/taxonomies.php:71
-msgid "Choose from the most used portfolios"
+msgid "Choose from the most used whistle groups"
 msgstr ""
 
 #, fuzzy
@@ -211,10 +287,6 @@ msgstr ""
 #~ msgstr "Aanpassingen tonen?"
 
 #, fuzzy
-#~ msgid "Add Role"
-#~ msgstr "Bewerk"
-
-#, fuzzy
 #~ msgid "Has Users"
 #~ msgstr "Gebruikersnaam"
 
@@ -229,10 +301,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Users"
 #~ msgstr "Gebruikersnaam"
-
-#, fuzzy
-#~ msgid "Edit the %s role"
-#~ msgstr "Bewerk"
 
 #~ msgid "Edit"
 #~ msgstr "Bewerk"
@@ -271,9 +339,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Remember Me"
 #~ msgstr "Herinner deze gegevens."
-
-#~ msgid "Title:"
-#~ msgstr "Titel"
 
 #, fuzzy
 #~ msgid "\"Remember me\" checkbox?"
@@ -356,15 +421,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Een geavanceerde widget die je de totale controle geeft over de output "
 #~ "van je pagina-links."
-
-#~ msgid "Limit:"
-#~ msgstr "Limiet:"
-
-#~ msgid "Order:"
-#~ msgstr "Volgorde:"
-
-#~ msgid "Order By:"
-#~ msgstr "Sorteer op:"
 
 #~ msgid "Include:"
 #~ msgstr "Omvat:"
@@ -617,9 +673,6 @@ msgstr ""
 
 #~ msgid "You must write something."
 #~ msgstr "Je moet hier iets schrijven."
-
-#~ msgid "Title"
-#~ msgstr "Titel"
 
 #~ msgid "Write"
 #~ msgstr "Schrijf"
@@ -896,9 +949,6 @@ msgstr ""
 #~ msgid "WP 2.7+ only."
 #~ msgstr "Enkel voor WP 2.7+"
 
-#~ msgid "Footer Insert:"
-#~ msgstr "Inserts voor Footer:"
-
 #~ msgid ""
 #~ "You can place XHTML and JavaScript here to have it inserted automatically "
 #~ "into your theme.  If you have a script, such as one from Google "
@@ -1000,9 +1050,6 @@ msgstr ""
 #~ "Je kan deze <acronym title=\"Extensible Hypertext Markup Language"
 #~ "\">XHTML</acronym> tags&#58; gebruiken."
 
-#~ msgid "Search this site..."
-#~ msgstr "Doorzoek deze site"
-
 #~ msgid "Copyright"
 #~ msgstr "Copyright"
 
@@ -1059,9 +1106,6 @@ msgstr ""
 
 #~ msgid "Primary Home"
 #~ msgstr "Primair Home"
-
-#~ msgid "Primary Author"
-#~ msgstr "Primaire Auteur"
 
 #~ msgid "Primary Category"
 #~ msgstr "Primaire Rubriek"
@@ -1146,9 +1190,6 @@ msgstr ""
 
 #~ msgid "Select Post"
 #~ msgstr "Selecteer bericht"
-
-#~ msgid "Type:"
-#~ msgstr "Type:"
 
 #~ msgid "Format:"
 #~ msgstr "Format:"
