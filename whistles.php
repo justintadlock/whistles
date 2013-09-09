@@ -1,27 +1,35 @@
 <?php
 /**
  * Plugin Name: Whistles
- * Plugin URI: https://github.com/justintadlock/whistles
- * Description: Tabs, accordions, and all that other jazz.
- * Version: 0.1.0-alpha-1
+ * Plugin URI: http://themehybrid.com/plugins/whistles
+ * Description: A plugin for managing tabs, toggles, accordions, and other types of content on a WordPress install.
+ * Version: 0.1.0
  * Author: Justin Tadlock
  * Author URI: http://justintadlock.com
  *
- * Long Description
+ * A plugin for managing "whistles", which is just an arbitrary name given to content for displaying 
+ * in tabs, toggles, accordions, and other types of bells and whistles users want on their sites.  
+ * This plugin is a reimagining of how these types of things should by handled by themes.  The plugin 
+ * handles the content for portability.  The theme handles the display of the content.  It also gives 
+ * near unlimited potential for "whistle" content, only limiting the user by what they can add to the 
+ * post editor.
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
- * General Public License version 2, as published by the Free Software Foundation.  You may NOT assume 
- * that you can use any other version of the GPL.
+ * General Public License as published by the Free Software Foundation; either version 2 of the License, 
+ * or (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * You should have received a copy of the GNU General Public License along with this program; if not, write 
+ * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   Whistles
  * @version   0.1.0
  * @since     0.1.0
  * @author    Justin Tadlock <justin@justintadlock.com>
  * @copyright Copyright (c) 2013, Justin Tadlock
- * @link      https://github.com/justintadlock/whistles
+ * @link      http://themehybrid.com/plugins/whistles
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
