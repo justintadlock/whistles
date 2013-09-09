@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Whistles WordPress Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-08 15:14-0600\n"
-"PO-Revision-Date: 2013-09-08 15:14-0600\n"
+"POT-Creation-Date: 2013-09-09 00:43-0600\n"
+"PO-Revision-Date: 2013-09-09 00:44-0600\n"
 "Last-Translator: \n"
 "Language-Team:  <justin@justintadlock.com>\n"
 "Language: en_US\n"
@@ -16,205 +16,223 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/admin.php:79
+#: admin/admin.php:97
 #, fuzzy
 msgid "Add Whistles"
 msgstr "Bewerk"
 
-#: admin/admin.php:86 includes/class-tabs-widget.php:126
+#: admin/admin.php:110 inc/class-whistles-widget.php:132
 msgid "Tabs"
 msgstr ""
 
-#: admin/admin.php:87 includes/class-tabs-widget.php:127
+#: admin/admin.php:111 inc/class-whistles-widget.php:133
 msgid "Toggle"
 msgstr ""
 
-#: admin/admin.php:102 includes/class-tabs-widget.php:132
+#: admin/admin.php:112 inc/class-whistles-widget.php:134
+msgid "Accordion"
+msgstr ""
+
+#: admin/admin.php:127 inc/class-whistles-widget.php:139
 msgid "Ascending"
 msgstr ""
 
-#: admin/admin.php:103 includes/class-tabs-widget.php:133
+#: admin/admin.php:128 inc/class-whistles-widget.php:140
 msgid "Descending"
 msgstr ""
 
-#: admin/admin.php:108 includes/class-tabs-widget.php:138
+#: admin/admin.php:133 inc/class-whistles-widget.php:145
 #, fuzzy
 msgid "Author"
 msgstr "Primaire Auteur"
 
-#: admin/admin.php:109 includes/class-tabs-widget.php:139
+#: admin/admin.php:134 inc/class-whistles-widget.php:146
 msgid "Date"
 msgstr ""
 
-#: admin/admin.php:110 includes/class-tabs-widget.php:140
+#: admin/admin.php:135 inc/class-whistles-widget.php:147
 msgid "ID"
 msgstr ""
 
-#: admin/admin.php:111 includes/class-tabs-widget.php:141
+#: admin/admin.php:136 inc/class-whistles-widget.php:148
 msgid "Random"
 msgstr ""
 
-#: admin/admin.php:112 includes/class-tabs-widget.php:142
+#: admin/admin.php:137 inc/class-whistles-widget.php:149
 msgid "Slug"
 msgstr ""
 
-#: admin/admin.php:113 includes/class-tabs-widget.php:143
+#: admin/admin.php:138 inc/class-whistles-widget.php:150
 msgid "Title"
 msgstr "Titel"
 
-#: admin/admin.php:124 admin/admin.php:131
+#: admin/admin.php:149 admin/admin.php:156
 #, fuzzy
 msgid "Insert"
 msgstr "Inserts voor Footer:"
 
-#: admin/admin.php:155
+#: admin/admin.php:182 inc/class-whistles-widget.php:157
+msgid "You need at least one whistle group to display whistles."
+msgstr ""
+
+#: admin/admin.php:184 inc/class-whistles-widget.php:159
+#, fuzzy
+msgid "Whistle Groups &rarr;"
+msgstr "Doorzoek deze site"
+
+#: admin/admin.php:188 admin/admin.php:235
+msgid "Cancel"
+msgstr ""
+
+#: admin/admin.php:192
 #, fuzzy
 msgid "Type"
 msgstr "Type:"
 
-#: admin/admin.php:164
+#: admin/admin.php:201
 msgid "Group"
 msgstr ""
 
-#: admin/admin.php:174
+#: admin/admin.php:211
 msgid "Number of whistles to display"
 msgstr ""
 
-#: admin/admin.php:178 includes/class-tabs-widget.php:172
+#: admin/admin.php:215 inc/class-whistles-widget.php:189
 #, fuzzy
 msgid "Order"
 msgstr "Volgorde:"
 
-#: admin/admin.php:187
+#: admin/admin.php:224
 #, fuzzy
 msgid "Order By"
 msgstr "Sorteer op:"
 
-#: admin/admin.php:197
+#: admin/admin.php:234
 msgid "Insert Whistles"
 msgstr ""
 
-#: admin/admin.php:198
-msgid "Cancel"
+#: inc/class-whistles-and-bells.php:164
+#, php-format
+msgid "The %s method must be overwritten in a sub-class."
 msgstr ""
 
-#: includes/class-tabs-widget.php:20
+#: inc/class-whistles-widget.php:26
 msgid "Bells and whistles."
 msgstr ""
 
-#: includes/class-tabs-widget.php:32 includes/post-types.php:82
-#: includes/post-types.php:84 includes/post-types.php:94
+#: inc/class-whistles-widget.php:38 inc/post-types.php:82
+#: inc/post-types.php:84 inc/post-types.php:94
 msgid "Whistles"
 msgstr ""
 
-#: includes/class-tabs-widget.php:148
+#: inc/class-whistles-widget.php:165
 msgid "Title:"
 msgstr "Titel"
 
-#: includes/class-tabs-widget.php:152
+#: inc/class-whistles-widget.php:169
 msgid "Type:"
 msgstr "Type:"
 
-#: includes/class-tabs-widget.php:160
+#: inc/class-whistles-widget.php:177
 msgid "Group:"
 msgstr ""
 
-#: includes/class-tabs-widget.php:168
+#: inc/class-whistles-widget.php:185
 msgid "Limit:"
 msgstr "Limiet:"
 
-#: includes/class-tabs-widget.php:180
+#: inc/class-whistles-widget.php:197
 msgid "Order By:"
 msgstr "Sorteer op:"
 
-#: includes/post-types.php:83 includes/post-types.php:85
+#: inc/post-types.php:83 inc/post-types.php:85
 msgid "Whistle"
 msgstr ""
 
-#: includes/post-types.php:86
+#: inc/post-types.php:86
 msgid "Add New"
 msgstr ""
 
-#: includes/post-types.php:87
+#: inc/post-types.php:87
 msgid "Add New Whistle"
 msgstr ""
 
-#: includes/post-types.php:88
+#: inc/post-types.php:88
 #, fuzzy
 msgid "Edit Whistle"
 msgstr "Bewerk"
 
-#: includes/post-types.php:89
+#: inc/post-types.php:89
 msgid "New Whistle"
 msgstr ""
 
-#: includes/post-types.php:90
+#: inc/post-types.php:90
 msgid "View Whistle"
 msgstr ""
 
-#: includes/post-types.php:91
+#: inc/post-types.php:91
 #, fuzzy
 msgid "Search Whistles"
 msgstr "Doorzoek deze site"
 
-#: includes/post-types.php:92
+#: inc/post-types.php:92
 msgid "No whistles found"
 msgstr ""
 
-#: includes/post-types.php:93
+#: inc/post-types.php:93
 msgid "No whistles found in trash"
 msgstr ""
 
-#: includes/taxonomies.php:49 includes/taxonomies.php:51
+#: inc/taxonomies.php:49 inc/taxonomies.php:51
 msgid "Whistle Groups"
 msgstr ""
 
-#: includes/taxonomies.php:50 includes/taxonomies.php:52
+#: inc/taxonomies.php:50 inc/taxonomies.php:52
 msgid "Whistle Group"
 msgstr ""
 
-#: includes/taxonomies.php:53
+#: inc/taxonomies.php:53
 #, fuzzy
 msgid "Search Whistle Groups"
 msgstr "Doorzoek deze site"
 
-#: includes/taxonomies.php:54
+#: inc/taxonomies.php:54
 msgid "Popular Whistle Groups"
 msgstr ""
 
-#: includes/taxonomies.php:55
+#: inc/taxonomies.php:55
 msgid "All Whistle Groups"
 msgstr ""
 
-#: includes/taxonomies.php:56
+#: inc/taxonomies.php:56
 msgid "Edit Whistle Group"
 msgstr ""
 
-#: includes/taxonomies.php:57
+#: inc/taxonomies.php:57
 msgid "View Whistle Group"
 msgstr ""
 
-#: includes/taxonomies.php:58
+#: inc/taxonomies.php:58
 msgid "Update Whistle Group"
 msgstr ""
 
-#: includes/taxonomies.php:59
+#: inc/taxonomies.php:59
 msgid "Add New Whistle Group"
 msgstr ""
 
-#: includes/taxonomies.php:60
+#: inc/taxonomies.php:60
 msgid "New Whistle Group Name"
 msgstr ""
 
-#: includes/taxonomies.php:61
+#: inc/taxonomies.php:61
 msgid "Separate whistle groups with commas"
 msgstr ""
 
-#: includes/taxonomies.php:62
+#: inc/taxonomies.php:62
 msgid "Add or remove whistle groups"
 msgstr ""
 
-#: includes/taxonomies.php:63
+#: inc/taxonomies.php:63
 msgid "Choose from the most used whistle groups"
 msgstr ""
 
