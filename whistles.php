@@ -49,7 +49,7 @@ final class Whistles_Load {
 		add_action( 'plugins_loaded', array( __CLASS__, 'admin' ), 4 );
 
 		/* Enqueue scripts and styles. */
-		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 
 		/* Filter current_theme_supports for easier conditionals. */
 		add_filter( 'current_theme_supports-whistles', array( __CLASS__, 'current_theme_supports' ), 10, 3 );
@@ -125,13 +125,22 @@ final class Whistles_Load {
 	 * @access public
 	 * @return void
 	 */
-	public static function enqueue_styles() {
-
-		if ( current_theme_supports( 'whistles', 'styles' ) )
-			return;
+	public static function enqueue_scripts() {
 
 		/* Use the .min stylesheet if SCRIPT_DEBUG is turned off. */
 		$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+		/* Register the JS file. Load later if needed. */
+		wp_register_script( 
+			'whistles', 
+			WHISTLES_URI . 'js/whistles.min.js', 
+			array( 'jquery' ),
+			'20130908',
+			true
+		);
+
+		if ( current_theme_supports( 'whistles', 'styles' ) )
+			return;
 
 		/* Enqueue the stylesheet. */
 		wp_enqueue_style(

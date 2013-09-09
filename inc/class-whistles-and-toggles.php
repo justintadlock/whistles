@@ -25,7 +25,7 @@ class Whistles_And_Toggles extends Whistles_And_Bells {
 
 		/* Load custom JavaScript for toggles unless the current theme is handling it. */
 		if ( !current_theme_supports( 'whistles', 'scripts' ) )
-			wp_enqueue_script( 'whistles', WHISTLES_URI . 'js/whistles.min.js', array( 'jquery' ) );
+			wp_enqueue_script( 'whistles' );
 
 		/* Set up an empty string to return. */
 		$output = '';
