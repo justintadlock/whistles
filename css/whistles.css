@@ -20,6 +20,10 @@
 			cursor: pointer;
 }
 
+.whistle-content {
+	overflow: hidden;
+}
+
 /**
  * Tabs
  */
