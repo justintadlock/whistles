@@ -55,7 +55,7 @@ function whistles_get_whistles( $args = array() ) {
 	if ( !is_object( $whistles_object ) )
 		$whistles_object = $type === 'toggle' ? new Whistles_And_Toggles( $args ) : new Whistles_And_Tabs( $args );
 
-	return $whistles_object->get_html();
+	return $whistles_object->get_markup();
 }
 
 /**
