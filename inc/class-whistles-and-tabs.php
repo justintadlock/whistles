@@ -3,8 +3,13 @@
  * Whistles_And_Tabs class.  Extends the Whistles_And_Bells class to format the whistle posts into 
  * a group of tabs.
  *
- * @since  0.1.0
- * @access public
+ * @package    Whistles
+ * @subpackage Includes
+ * @since      0.1.0
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2013, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/whistles
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 class Whistles_And_Tabs extends Whistles_And_Bells {
 

@@ -3,6 +3,14 @@
  * Base class for creating displaying sets of whistles (post type) on the front end.  This class isn't meant 
  * to be used directly.  You should extend it was a sub-class.  Your sub-class must overwrite the format() 
  * method.
+ *
+ * @package    Whistles
+ * @subpackage Includes
+ * @since      0.1.0
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2013, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/whistles
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 class Whistles_And_Bells {

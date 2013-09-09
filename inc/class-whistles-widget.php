@@ -1,10 +1,16 @@
 <?php
-
 /**
- * Tabs widget class
+ * Whistles widget class.
  *
- * @since 0.1.0
+ * @package    Whistles
+ * @subpackage Includes
+ * @since      0.1.0
+ * @author     Justin Tadlock <justin@justintadlock.com>
+ * @copyright  Copyright (c) 2013, Justin Tadlock
+ * @link       http://themehybrid.com/plugins/whistles
+ * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
+
 class Whistles_Widget extends WP_Widget {
 
 	/**
@@ -28,7 +34,7 @@ class Whistles_Widget extends WP_Widget {
 
 		/* Create the widget. */
 		$this->WP_Widget(
-			'whistles',                     // $this->id_base
+			'whistles',                    // $this->id_base
 			__( 'Whistles', 'whistles' ),  // $this->name
 			$widget_options,               // $this->widget_options
 			$control_options               // $this->control_options
