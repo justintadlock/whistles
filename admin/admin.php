@@ -2,7 +2,7 @@
 /**
  * Admin functions for the plugin.
  *
- * @package    TabsAndJazz
+ * @package    Whistles
  * @subpackage Admin
  * @since      0.1.0
  * @author     Justin Tadlock <justin@justintadlock.com>
@@ -17,9 +17,12 @@ add_action( 'admin_menu', 'whistles_admin_menu' );
 /* Fixes the parent file. */
 add_filter( 'parent_file', 'whistles_parent_file' );
 
-add_action( 'media_buttons', 'my_media_buttons', 11 );
+/* Adds a custom media button on the post editor. */
+add_action( 'media_buttons', 'whistles_media_buttons', 11 );
 
-add_action( 'admin_footer', 'whistles_editor_shortcode_popup' );
+/* Loads media button popup content in the footer. */
+add_action( 'admin_footer-post-new.php', 'whistles_editor_shortcode_popup' );
+add_action( 'admin_footer-post.php',     'whistles_editor_shortcode_popup' );
 
 /**
  * Creates admin sub-menu items under the "Appearance" screen in the admin.
@@ -49,7 +52,7 @@ function whistles_admin_menu() {
 		$taxonomy->labels->name,
 		$taxonomy->labels->menu_name,
 		$taxonomy->cap->manage_terms,
-		'edit-tags.php?taxonomy=whistle_group&post_type=whistle'
+		'edit-tags.php?taxonomy=whistle_group&amp;post_type=whistle'
 	);
 }
 
@@ -62,27 +65,45 @@ function whistles_admin_menu() {
  * @global object  $current_screen
  * @return string
  */
-function whistles_parent_file( $parent_file = '' ) {
-	global $current_screen;
+function whistles_parent_file( $parent_file ) {
+	global $current_screen, $self;
 
-	if ( in_array( $current_screen->base, array( 'post', 'edit' ) ) && 'whistle' === $current_screen->post_type )
+	/* Fix the parent file when viewing the Whistles or New Whistle screen in the admin. */
+	if ( in_array( $current_screen->base, array( 'post', 'edit' ) ) && 'whistle' === $current_screen->post_type ) {
 		$parent_file = 'themes.php';
+	}
 
-	elseif ( 'whistle_group' === $current_screen->taxonomy )
+	/* Fix the parent and self file when viewing the Whistle Groups screen in the admin. */
+	elseif ( 'whistle_group' === $current_screen->taxonomy ) {
 		$parent_file = 'themes.php';
+		$self        = 'edit-tags.php?taxonomy=whistle_group&amp;post_type=whistle';
+	}
 
 	return $parent_file;
 }
 
-/* @todo - only add on the post new/edit page in the admin. */
-function my_media_buttons( $editor_id ) {
+/**
+ * Displays a link to the Thickbox popup containing the shortcode config popup on the edit post screen.
+ *
+ * @since  0.1.0
+ * @access public
+ * @param  string  $editor_id
+ * @return void
+ */
+function whistles_media_buttons( $editor_id ) {
 	global $post;
 
 	if ( 'whistle' !== $post->post_type )
 		echo '<a href="#TB_inline?width=200&amp;height=530&amp;inlineId=whistles-shortcode-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Add Whistles' ) . '">' . __( 'Add Whistles' ) . '</a>';
 }
 
-/* @todo - only add on the post new/edit page in the admin. */
+/**
+ * Shortcode config popup when the "Add Whistles" media button is clicked.
+ *
+ * @since  0.1.0
+ * @access public
+ * @return void
+ */
 function whistles_editor_shortcode_popup() {
 
 	$type = array( 
