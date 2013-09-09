@@ -31,18 +31,18 @@
 .whistles-tabs {}
 
 	/* Unordered list. */
-	.whistles-tabs-nav {
+	.whistles-tabs .whistles-tabs-nav {
 		list-style: none;
 		margin: 0;
 	}
 
 		/* Individual list item. */
-		.whistles-tabs-nav li {
+		.whistles-tabs .whistles-tabs-nav li {
 			display: inline-block;
 		}
 
 			/* Link within list item. */
-			.whistles-tabs-nav li a {
+			.whistles-tabs .whistles-tabs-nav li a {
 				display:            inline-block;
 				padding:            0.5rem 1.5rem;
 				font-size:          0.75em;
@@ -54,22 +54,22 @@
 				border-right-width: 0;
 			}
 
-			.whistles-tabs-nav li:last-child a {
+			.whistles-tabs .whistles-tabs-nav li:last-child a {
 				border-right-width: 1px;
 			}
 
-			.whistles-tabs-nav li a:hover {
+			.whistles-tabs .whistles-tabs-nav li a:hover {
 				color:      #555;
 				background: #f9f9f9;
 			}
-			.whistles-tabs-nav li[aria-selected="true"] a {
+			.whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
 				color:               #555;
 				background:          #fff;
 				border-bottom-color: #fff;
 			}
 
 	/* Wraps all of the tab content panels. */
-	.whistles-tabs-wrap {
+	.whistles-tabs .whistles-tabs-wrap {
 		margin:     -1px 0 0;
 		padding:    1.5rem 1.5rem 0 1.5rem;
 		color:      #666;
