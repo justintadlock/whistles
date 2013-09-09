@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Whistles WordPress Plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-09 00:43-0600\n"
-"PO-Revision-Date: 2013-09-09 00:44-0600\n"
+"POT-Creation-Date: 2013-09-09 02:22-0600\n"
+"PO-Revision-Date: 2013-09-09 02:22-0600\n"
 "Last-Translator: \n"
 "Language-Team:  <justin@justintadlock.com>\n"
 "Language: en_US\n"
@@ -117,7 +117,7 @@ msgid "The %s method must be overwritten in a sub-class."
 msgstr ""
 
 #: inc/class-whistles-widget.php:26
-msgid "Bells and whistles."
+msgid "Tabs, toggles, accordions, bells, whistles, and all that jazz."
 msgstr ""
 
 #: inc/class-whistles-widget.php:38 inc/post-types.php:82

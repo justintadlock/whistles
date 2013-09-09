@@ -23,7 +23,7 @@ class Whistles_Widget extends WP_Widget {
 		/* Set up the widget options. */
 		$widget_options = array(
 			'classname'   => 'whistles',
-			'description' => esc_html__( 'Bells and whistles.', 'whistles' )
+			'description' => esc_html__( 'Tabs, toggles, accordions, bells, whistles, and all that jazz.', 'whistles' )
 		);
 
 		/* Set up the widget control options. */
