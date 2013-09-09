@@ -51,13 +51,17 @@ class Whistles_And_Bells {
 	 * @return void
 	 */
 	public function __construct( $args = array() ) {
+		global $wp_embed;
 
 		/* Use same default filters as 'the_content' with a little more flexibility. */
-		add_filter( 'whistle_content', 'wptexturize',       5 );
-		add_filter( 'whistle_content', 'convert_smilies',   10 );
-		add_filter( 'whistle_content', 'convert_chars',     15 );
-		add_filter( 'whistle_content', 'wpautop',           20 );
-		add_filter( 'whistle_content', 'shortcode_unautop', 25 );
+		add_filter( 'whistle_content', array( $wp_embed, 'run_shortcode' ),   5 );
+		add_filter( 'whistle_content', array( $wp_embed, 'autoembed'     ),   5 );
+		add_filter( 'whistle_content',                   'wptexturize',       10 );
+		add_filter( 'whistle_content',                   'convert_smilies',   15 );
+		add_filter( 'whistle_content',                   'convert_chars',     20 );
+		add_filter( 'whistle_content',                   'wpautop',           25 );
+		add_filter( 'whistle_content',                   'do_shortcode',      30 );
+		add_filter( 'whistle_content',                   'shortcode_unautop', 35 );
 
 		/* Set up the default arguments. */
 		$defaults = array(
