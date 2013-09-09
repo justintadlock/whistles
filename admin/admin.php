@@ -112,11 +112,7 @@ function whistles_editor_shortcode_popup() {
 	if ( !current_user_can( 'edit_whistles' ) )
 		return;
 
-	$type = array( 
-		'tabs'      => esc_attr__( 'Tabs',   'whistles' ), 
-		'toggle'    => esc_attr__( 'Toggle', 'whistles' ), 
-		'accordion' => esc_attr__( 'Accordion', 'whistles' ),
-	);
+	$type = whistles_get_allowed_types();
 
 	$terms = get_terms( 'whistle_group' );
 

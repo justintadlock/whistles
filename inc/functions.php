@@ -18,6 +18,24 @@ add_action( 'init', 'whistles_register_shortcodes' );
 add_action( 'widgets_init', 'whistles_register_widgets' );
 
 /**
+ * Function for returning the allowed whistle types for display.
+ *
+ * @since  0.1.0
+ * @access public
+ * @return array
+ */
+function whistles_get_allowed_types() {
+
+	$allowed_types = array(
+		'tabs'      => __( 'Tabs',      'whistles' ),
+		'toggle'    => __( 'Toggle',    'whistles' ),
+		'accordion' => __( 'Accordion', 'whistles' )
+	);
+
+	return apply_filters( 'whistles_allowed_types', $allowed_types );
+}
+
+/**
  * Wrapper function for outputting whistles.  You can call one of the classes directly, but it's best to use 
  * this function if needed within a theme template.
  *
@@ -28,7 +46,7 @@ add_action( 'widgets_init', 'whistles_register_widgets' );
 function whistles_get_whistles( $args = array() ) {
 
 	/* Allow types other than 'tabs' or 'toggle'. */
-	$allowed = apply_filters( 'whistles_allowed_types', array( 'tabs', 'toggle', 'accordion' ) );
+	$allowed = array_keys( whistles_get_allowed_types() );
 
 	/* Clean up the type and allow typos of 'tabs' and 'toggle'. */
 	$args['type'] = sanitize_key( strtolower( $args['type'] ) );
