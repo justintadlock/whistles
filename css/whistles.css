@@ -87,11 +87,13 @@
  */
 
 /* Wraps the entire toggle/accordion section. */
-.whistles-toggle {
+.whistles-toggle,
+.whistles-accordion {
 }
 
 	/* Title for individual section. */
-	.whistles-toggle .whistle-title {
+	.whistles-toggle .whistle-title,
+	.whistles-accordion .whistle-title {
 		margin: 0;
 				padding: 0.5rem 1.5rem;
 				font-size: 0.75em;
@@ -103,21 +105,22 @@
 		border:   1px solid #ececec;
 				border-top-width: 0;
 	}
-		.whistles-toggle .whistle-title:first-child {
+		.whistles-toggle .whistle-title:first-child, 
+		.whistles-accordion .whistle-title:first-child {
 			border-top-width: 1px;
 		}
 
 		.whistles-toggle .whistle-title:hover,
-		.whistles-toggle .whistle-title[aria-selected="true"] {
+		.whistles-toggle .whistle-title[aria-selected="true"],
+		.whistles-accordion .whistle-title:hover, 
+		.whistles-accordion .whistle-title[aria-selected="true"] {
 			color: #555;
 			background: #ededed;
 		}
 
-		.whistles-toggle .whistle-title:last-child {
-		}
-
 	/* Individual toggle section content. */
-	.whistles-toggle .whistle-content {
+	.whistles-toggle .whistle-content,
+	.whistles-accordion .whistle-content {
 			-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		margin: -1px 0 0;

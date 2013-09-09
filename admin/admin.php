@@ -107,8 +107,9 @@ function whistles_media_buttons( $editor_id ) {
 function whistles_editor_shortcode_popup() {
 
 	$type = array( 
-		'tabs'   => esc_attr__( 'Tabs',   'whistles' ), 
-		'toggle' => esc_attr__( 'Toggle', 'whistles' ), 
+		'tabs'      => esc_attr__( 'Tabs',   'whistles' ), 
+		'toggle'    => esc_attr__( 'Toggle', 'whistles' ), 
+		'accordion' => esc_attr__( 'Accordion', 'whistles' ),
 	);
 
 	$terms = get_terms( 'whistle_group' );

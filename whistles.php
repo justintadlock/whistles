@@ -88,6 +88,7 @@ final class Whistles_Load {
 		require_once( WHISTLES_DIR . 'inc/class-whistles-and-bells.php' );
 		require_once( WHISTLES_DIR . 'inc/class-whistles-and-tabs.php' );
 		require_once( WHISTLES_DIR . 'inc/class-whistles-and-toggles.php' );
+		require_once( WHISTLES_DIR . 'inc/class-whistles-and-accordions.php' );
 		require_once( WHISTLES_DIR . 'inc/functions.php' );
 	}
 

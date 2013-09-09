@@ -129,8 +129,9 @@ class Whistles_Widget extends WP_Widget {
 
 		/* Create an array of archive types. */
 		$type = array( 
-			'tabs'   => esc_attr__( 'Tabs',   'whistles' ), 
-			'toggle' => esc_attr__( 'Toggle', 'whistles' ), 
+			'tabs'      => esc_attr__( 'Tabs',   'whistles' ), 
+			'toggle'    => esc_attr__( 'Toggle', 'whistles' ), 
+			'accordion' => esc_attr__( 'Accordion', 'whistles' ),
 		);
 
 		/* Create an array of order options. */

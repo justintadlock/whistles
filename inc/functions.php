@@ -28,7 +28,7 @@ add_action( 'widgets_init', 'whistles_register_widgets' );
 function whistles_get_whistles( $args = array() ) {
 
 	/* Allow types other than 'tabs' or 'toggle'. */
-	$allowed = apply_filters( 'whistles_allowed_types', array( 'tabs', 'toggle' ) );
+	$allowed = apply_filters( 'whistles_allowed_types', array( 'tabs', 'toggle', 'accordion' ) );
 
 	/* Clean up the type and allow typos of 'tabs' and 'toggle'. */
 	$args['type'] = sanitize_key( strtolower( $args['type'] ) );
@@ -53,8 +53,20 @@ function whistles_get_whistles( $args = array() ) {
 	$whistles_object = apply_filters( 'whistles_object', null, $args );
 
 	/* If no object was returned, use one of the plugin's defaults. */
-	if ( !is_object( $whistles_object ) )
-		$whistles_object = $type === 'toggle' ? new Whistles_And_Toggles( $args ) : new Whistles_And_Tabs( $args );
+	if ( !is_object( $whistles_object ) ) {
+
+		/* Accordion. */
+		if ( 'accordion' === $type )
+			$whistles_object = new Whistles_And_Accordions( $args );
+
+		/* Toggle. */
+		elseif ( 'toggle' === $type )
+			$whistles_object = new Whistles_And_Toggles( $args );
+
+		/* Tabs. */
+		else
+			$whistles_object = new Whistles_And_Tabs( $args );
+	}
 
 	/* Return the HTML markup. */
 	return $whistles_object->get_markup();
