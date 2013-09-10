@@ -96,7 +96,7 @@ function whistles_media_buttons( $editor_id ) {
 	if ( !current_user_can( 'edit_whistles' ) )
 		return;
 
-	if ( 'whistle' !== $post->post_type )
+	if ( is_object( $post ) && !empty( $post->post_type ) && 'whistle' !== $post->post_type )
 		echo '<a href="#TB_inline?width=200&amp;height=530&amp;inlineId=whistles-shortcode-popup" class="button-secondary thickbox" data-editor="' . esc_attr( $editor_id ) . '" title="' . esc_attr__( 'Add Whistles' ) . '">' . __( 'Add Whistles' ) . '</a>';
 }
 
