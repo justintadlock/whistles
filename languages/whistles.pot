@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Whistles WordPress Plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-09 02:22-0600\n"
-"PO-Revision-Date: 2013-09-09 02:22-0600\n"
+"PO-Revision-Date: 2013-09-12 12:46-0600\n"
 "Last-Translator: \n"
 "Language-Team:  <justin@justintadlock.com>\n"
 "Language: en_US\n"
@@ -17,9 +17,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: admin/admin.php:97
-#, fuzzy
 msgid "Add Whistles"
-msgstr "Bewerk"
+msgstr ""
 
 #: admin/admin.php:110 inc/class-whistles-widget.php:132
 msgid "Tabs"
@@ -42,9 +41,8 @@ msgid "Descending"
 msgstr ""
 
 #: admin/admin.php:133 inc/class-whistles-widget.php:145
-#, fuzzy
 msgid "Author"
-msgstr "Primaire Auteur"
+msgstr ""
 
 #: admin/admin.php:134 inc/class-whistles-widget.php:146
 msgid "Date"
@@ -64,30 +62,27 @@ msgstr ""
 
 #: admin/admin.php:138 inc/class-whistles-widget.php:150
 msgid "Title"
-msgstr "Titel"
+msgstr ""
 
 #: admin/admin.php:149 admin/admin.php:156
-#, fuzzy
 msgid "Insert"
-msgstr "Inserts voor Footer:"
+msgstr ""
 
 #: admin/admin.php:182 inc/class-whistles-widget.php:157
 msgid "You need at least one whistle group to display whistles."
 msgstr ""
 
 #: admin/admin.php:184 inc/class-whistles-widget.php:159
-#, fuzzy
 msgid "Whistle Groups &rarr;"
-msgstr "Doorzoek deze site"
+msgstr ""
 
 #: admin/admin.php:188 admin/admin.php:235
 msgid "Cancel"
 msgstr ""
 
 #: admin/admin.php:192
-#, fuzzy
 msgid "Type"
-msgstr "Type:"
+msgstr ""
 
 #: admin/admin.php:201
 msgid "Group"
@@ -98,14 +93,12 @@ msgid "Number of whistles to display"
 msgstr ""
 
 #: admin/admin.php:215 inc/class-whistles-widget.php:189
-#, fuzzy
 msgid "Order"
-msgstr "Volgorde:"
+msgstr ""
 
 #: admin/admin.php:224
-#, fuzzy
 msgid "Order By"
-msgstr "Sorteer op:"
+msgstr ""
 
 #: admin/admin.php:234
 msgid "Insert Whistles"
@@ -127,11 +120,11 @@ msgstr ""
 
 #: inc/class-whistles-widget.php:165
 msgid "Title:"
-msgstr "Titel"
+msgstr ""
 
 #: inc/class-whistles-widget.php:169
 msgid "Type:"
-msgstr "Type:"
+msgstr ""
 
 #: inc/class-whistles-widget.php:177
 msgid "Group:"
@@ -139,11 +132,11 @@ msgstr ""
 
 #: inc/class-whistles-widget.php:185
 msgid "Limit:"
-msgstr "Limiet:"
+msgstr ""
 
 #: inc/class-whistles-widget.php:197
 msgid "Order By:"
-msgstr "Sorteer op:"
+msgstr ""
 
 #: inc/post-types.php:83 inc/post-types.php:85
 msgid "Whistle"
@@ -158,9 +151,8 @@ msgid "Add New Whistle"
 msgstr ""
 
 #: inc/post-types.php:88
-#, fuzzy
 msgid "Edit Whistle"
-msgstr "Bewerk"
+msgstr ""
 
 #: inc/post-types.php:89
 msgid "New Whistle"
@@ -171,9 +163,8 @@ msgid "View Whistle"
 msgstr ""
 
 #: inc/post-types.php:91
-#, fuzzy
 msgid "Search Whistles"
-msgstr "Doorzoek deze site"
+msgstr ""
 
 #: inc/post-types.php:92
 msgid "No whistles found"
@@ -192,9 +183,8 @@ msgid "Whistle Group"
 msgstr ""
 
 #: inc/taxonomies.php:53
-#, fuzzy
 msgid "Search Whistle Groups"
-msgstr "Doorzoek deze site"
+msgstr ""
 
 #: inc/taxonomies.php:54
 msgid "Popular Whistle Groups"
