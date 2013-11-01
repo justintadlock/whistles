@@ -28,54 +28,22 @@ The great thing about this method is that you're pretty much able to put whateve
 * "Add Whistles" media button above the post content editor for inserting whistles.
 * "Whistles" widget under the "Appearance > Widgets" admin screen.
 
-## Installation
-
-1. Upload the `whistles` folder to your `/wp-content/plugins/` directory.
-2. Activate the "Whistles" plugin through the "Plugins" menu in WordPress.
-3. Visit "Appearance > Whistles" to create new whistles.
-
-## Frequently Asked Questions
-
-### Another tabs plugin?
-
-I know what you're thinking.  But, I promise you this one is better.  It might not be the shiniest or the most glamorous, but it's the easiest for actual living, breathing human beings to use.  It's also probably the easiest to extend from a theme author point of view.  I call that a win+win.
-
-### Why no look good with my theme?
-
-With plugins like this, it's literally impossible for the plugin author to design something that will look good with every theme.  I actually created this plugin with theme authors in mind.  The code is extremely simple so that even the newest theme author could create custom styles for it.  Please ask your theme author to support this plugin in his or her theme.
-
-### How do I customize the styles for this thing?
-
-You can simply start overwriting styles via your theme's `style.css` file.
-
-Or, you can put this within the theme setup function in your theme's `functions.php`:
-
-	add_theme_support( 'whistles', array( 'styles' => true ) );
-
-Then, copy the contents of this plugin's `/css/whistles.css` file into your active theme's `style.css` file.  You'll be in full control of the styles from that point forward.
-
-### How do I overwrite the JavaScript?
-
-This should go into your theme setup function within your theme's `functions.php`:
-
-	add_theme_support( 'whistles', array( 'scripts' => true ) );
-
-From that point, do your own thing.
-
-### How do I modify...?
-
-If there's anything else you want to customize, I'll assume you're a theme/plugin author at this point.  The code is well documented.  There are plenty of hooks.  Have at it!  I'm more than willing to help out with this on my [support forums](http://themehybrid.com/support) if you need the help.
-
-### Can you help me?
-
-Unfortunately, I cannot provide free support for this plugin to everyone.  I honestly wish I could.  My day job requires too much of my time for that, which is how I pay the bills and eat.  However, you can sign up for my [support forums](http://themehybrid.com/support) for full support of this plugin, all my other plugins, and all my themes for one price.
-
-### Can you whistle?
-
-Sure.  Can't everyone?  What a sad world it be without whistling.
-
 ## Changelog
+
+### Version 1.1.1
+
+* Set the post type and taxonomy to `'public' => false`. This should keep them from showing up in things like automatically-generated sitemaps.
 
 ### Version 0.1.0
 
 * Everything's new!
+
+## Professional Support
+
+If you need professional plugin support from me, the plugin author, you can access the support forums at [Theme Hybrid](http://themehybrid.com/support), which is a professional WordPress help/support site where I handle support for all my plugins and themes for a community of 40,000+ users (and growing).
+
+## Copyright and License
+
+This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
+
+2013 &copy; [Justin Tadlock](http://justintadlock.com).

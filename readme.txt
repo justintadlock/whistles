@@ -4,8 +4,8 @@ Contributors: greenshady
 Donate link: http://themehybrid.com/donate
 Tags: widget, shortcode, jquery, tabs, toggle, accordion
 Requires at least: 3.6
-Tested up to: 3.7
-Stable tag: 0.1.0
+Tested up to: 3.7.1
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,18 @@ The great thing about this method is that you're pretty much able to put whateve
 * `[whistles]` shortcode for displaying whistles.
 * "Add Whistles" media button above the post content editor for inserting whistles.
 * "Whistles" widget under the "Appearance > Widgets" admin screen.
+
+### Professional Support
+
+If you need professional plugin support from me, the plugin author, you can access the support forums at [Theme Hybrid](http://themehybrid.com/support), which is a professional WordPress help/support site where I handle support for all my plugins and themes for a community of 40,000+ users (and growing).
+
+### Plugin Development
+
+If you're a theme author, plugin author, or just a code hobbyist, you can follow the development of this plugin on it's [GitHub repository](https://github.com/justintadlock/whistles). 
+
+### Donations
+
+Yes, I do accept donations.  If you want to buy me a beer or whatever, you can do so from my [donations page](http://themehybrid.com/donate).  I appreciate all donations, no matter the size.  Further development of this plugin is not contingent on donations, but they are always a nice incentive.
 
 == Installation ==
 
@@ -92,6 +104,10 @@ Sure.  Can't everyone?  What a sad world it be without whistling.
 5. Toggles view
 
 == Changelog ==
+
+### Version 1.1.1
+
+* Set the post type and taxonomy to `'public' => false`. This should keep them from showing up in things like automatically-generated sitemaps.
 
 ### Version 0.1.0
 
