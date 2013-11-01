@@ -3,7 +3,7 @@
  * Plugin Name: Whistles
  * Plugin URI: http://themehybrid.com/plugins/whistles
  * Description: A plugin for managing tabs, toggles, accordions, and other types of content on a WordPress install.
- * Version: 0.1.0
+ * Version: 0.1.1-beta
  * Author: Justin Tadlock
  * Author URI: http://justintadlock.com
  *
@@ -25,7 +25,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   Whistles
- * @version   0.1.0
+ * @version   0.1.1
  * @since     0.1.0
  * @author    Justin Tadlock <justin@justintadlock.com>
  * @copyright Copyright (c) 2013, Justin Tadlock
