@@ -26,7 +26,7 @@ function whistles_register_post_types() {
 	/* Set up the arguments for the portfolio item post type. */
 	$args = array(
 		'description'         => '',
-		'public'              => true,
+		'public'              => false,
 		'publicly_queryable'  => false,
 		'show_in_nav_menus'   => false,
 		'show_in_admin_bar'   => true,
