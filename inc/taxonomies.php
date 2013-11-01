@@ -25,7 +25,7 @@ function whistles_register_taxonomies() {
 
 	/* Set up the arguments for the portfolio taxonomy. */
 	$args = array(
-		'public'            => true,
+		'public'            => false,
 		'show_ui'           => true,
 		'show_in_nav_menus' => false,
 		'show_tagcloud'     => true,
