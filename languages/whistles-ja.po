@@ -1,0 +1,226 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Whistles WordPress Plugin\n"
+"POT-Creation-Date: 2013-09-12 13:38-0600\n"
+"PO-Revision-Date: 2013-11-11 15:26+0900\n"
+"Last-Translator: Fumito MIZUNO <ounziw@gmail.com>\n"
+"Language-Team: Fumito MIZUNO <ounziw@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr_e;esc_attr__;esc_html_e;esc_html__;_n;"
+"_x;_x:1,2c;_n:1,2\n"
+"X-Poedit-Basepath: ../\n"
+"Language: ja\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/admin.php:100
+msgid "Add Whistles"
+msgstr "Whisltes を追加"
+
+#: admin/admin.php:129 inc/class-whistles-widget.php:135
+msgid "Ascending"
+msgstr "昇順"
+
+#: admin/admin.php:130 inc/class-whistles-widget.php:136
+msgid "Descending"
+msgstr "降順"
+
+#: admin/admin.php:135 inc/class-whistles-widget.php:141
+msgid "Author"
+msgstr "作成者"
+
+#: admin/admin.php:136 inc/class-whistles-widget.php:142
+msgid "Date"
+msgstr "日付"
+
+#: admin/admin.php:137 inc/class-whistles-widget.php:143
+msgid "ID"
+msgstr "ID"
+
+#: admin/admin.php:138 inc/class-whistles-widget.php:144
+msgid "Random"
+msgstr "ランダム"
+
+#: admin/admin.php:139 inc/class-whistles-widget.php:145
+msgid "Slug"
+msgstr "スラッグ"
+
+#: admin/admin.php:140 inc/class-whistles-widget.php:146
+msgid "Title"
+msgstr "タイトル"
+
+#: admin/admin.php:151 admin/admin.php:158
+msgid "Insert"
+msgstr "挿入"
+
+#: admin/admin.php:184 inc/class-whistles-widget.php:153
+msgid "You need at least one whistle group to display whistles."
+msgstr "whistle を表示するには、最低一つ以上 whistle グループが必要です。"
+
+#: admin/admin.php:186 inc/class-whistles-widget.php:155
+msgid "Whistle Groups &rarr;"
+msgstr "whistle グループ &rarr;"
+
+#: admin/admin.php:190 admin/admin.php:237
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: admin/admin.php:194
+msgid "Type"
+msgstr "種類"
+
+#: admin/admin.php:203
+msgid "Group"
+msgstr "グループ"
+
+#: admin/admin.php:213
+msgid "Number of whistles to display"
+msgstr "表示する whistle の数"
+
+#: admin/admin.php:217 inc/class-whistles-widget.php:185
+msgid "Order"
+msgstr "順序"
+
+#: admin/admin.php:226
+msgid "Order By"
+msgstr "並び替え"
+
+#: admin/admin.php:236
+msgid "Insert Whistles"
+msgstr "Whistle を挿入"
+
+#: inc/class-whistles-and-bells.php:164
+#, php-format
+msgid "The %s method must be overwritten in a sub-class."
+msgstr "%s メソッドは子クラスで上書きしてください。"
+
+#: inc/class-whistles-widget.php:26
+msgid "Tabs, toggles, accordions, bells, whistles, and all that jazz."
+msgstr "Tabs, toggles, accordions, bells, whistles, and all that jazz."
+
+#: inc/class-whistles-widget.php:38 inc/post-types.php:82
+#: inc/post-types.php:84 inc/post-types.php:94
+msgid "Whistles"
+msgstr "Whistles"
+
+#: inc/class-whistles-widget.php:161
+msgid "Title:"
+msgstr "タイトル: "
+
+#: inc/class-whistles-widget.php:165
+msgid "Type:"
+msgstr "種類: "
+
+#: inc/class-whistles-widget.php:173
+msgid "Group:"
+msgstr "グループ: "
+
+#: inc/class-whistles-widget.php:181
+msgid "Limit:"
+msgstr "最大数: "
+
+#: inc/class-whistles-widget.php:193
+msgid "Order By:"
+msgstr "並び替え: "
+
+#: inc/functions.php:30
+msgid "Tabs"
+msgstr "Tab"
+
+#: inc/functions.php:31
+msgid "Toggle"
+msgstr "Toggle"
+
+#: inc/functions.php:32
+msgid "Accordion"
+msgstr "Accordion"
+
+#: inc/post-types.php:83 inc/post-types.php:85
+msgid "Whistle"
+msgstr "Whislte"
+
+#: inc/post-types.php:86
+msgid "Add New"
+msgstr "新規追加"
+
+#: inc/post-types.php:87
+msgid "Add New Whistle"
+msgstr "Whistle を新規追加"
+
+#: inc/post-types.php:88
+msgid "Edit Whistle"
+msgstr "Whistle を編集"
+
+#: inc/post-types.php:89
+msgid "New Whistle"
+msgstr "Whistle を追加"
+
+#: inc/post-types.php:90
+msgid "View Whistle"
+msgstr "Whistle を閲覧"
+
+#: inc/post-types.php:91
+msgid "Search Whistles"
+msgstr "Whistle を検索"
+
+#: inc/post-types.php:92
+msgid "No whistles found"
+msgstr "Whistle が見つかりません"
+
+#: inc/post-types.php:93
+msgid "No whistles found in trash"
+msgstr "ゴミ箱には Whistle がありません"
+
+#: inc/taxonomies.php:49 inc/taxonomies.php:51
+msgid "Whistle Groups"
+msgstr "Whistle グループ"
+
+#: inc/taxonomies.php:50 inc/taxonomies.php:52
+msgid "Whistle Group"
+msgstr "Whistle グループ"
+
+#: inc/taxonomies.php:53
+msgid "Search Whistle Groups"
+msgstr "Whistle グループを検索"
+
+#: inc/taxonomies.php:54
+msgid "Popular Whistle Groups"
+msgstr "人気のある Whistle グループ"
+
+#: inc/taxonomies.php:55
+msgid "All Whistle Groups"
+msgstr "全ての Whistle グループ"
+
+#: inc/taxonomies.php:56
+msgid "Edit Whistle Group"
+msgstr "Whistle グループを編集"
+
+#: inc/taxonomies.php:57
+msgid "View Whistle Group"
+msgstr "Whistle グループを表示"
+
+#: inc/taxonomies.php:58
+msgid "Update Whistle Group"
+msgstr "Whistle グループを更新"
+
+#: inc/taxonomies.php:59
+msgid "Add New Whistle Group"
+msgstr "Whistle グループを新規追加"
+
+#: inc/taxonomies.php:60
+msgid "New Whistle Group Name"
+msgstr "Whistle グループ名を追加"
+
+#: inc/taxonomies.php:61
+msgid "Separate whistle groups with commas"
+msgstr "Whistle グループをカンマで区切る"
+
+#: inc/taxonomies.php:62
+msgid "Add or remove whistle groups"
+msgstr "Whistle グループを追加／削除"
+
+#: inc/taxonomies.php:63
+msgid "Choose from the most used whistle groups"
+msgstr "よく使われている Whistle グループから選択"
